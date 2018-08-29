@@ -1,3 +1,9 @@
 a{
     color: red;
 }
+
+.destaque{
+    color: GREEN;
+    font-weight: bold;
+    font-size: 1.5em;
+}

@@ -1,0 +1,15 @@
+<div>
+    <article>
+        <h3>Event Binding - Exemplos</h3>
+        <div>
+            <button (click)="onClick()" class="form-control btn btn-primary">Mostrar Mensagem</button>
+            <br>
+            <input type="text" class="form-control" (keyup)="onKeyUp($event)" (keyup.enter)="save(campo.value)" (blur)="save(campo.value)" #campo/>
+            <br>
+            <div>Conteudo atual: {{conteudoAtual}} </div>
+            <div>Conteudo armazenado: {{conteudoArmazenado}} </div>
+            <br>
+            <span (mouseover)="onMouseSpan()" (mouseout)="onMouseSpan()" [class.destaque]="isMouseOver" >Mais eventos no Angular !!!</span>
+        </div>
+    </article>
+</div>

@@ -7,13 +7,15 @@ import { CursosComponent } from './cursos/cursos.component';
 import { EscolasComponent  } from './escolas/escolas.component';
 import { BindingComponent } from './bindings/binding.component'
 
+
 import {CursosService} from './cursos/cursos.service';
 import {EscolasService} from './escolas/escolas.service';
+import { EventosComponent } from './eventos/eventos.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, CursosComponent, EscolasComponent, BindingComponent
+    AppComponent, CursosComponent, EscolasComponent, BindingComponent, EventosComponent
   ],
   imports: [
     BrowserModule
