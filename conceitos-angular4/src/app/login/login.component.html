@@ -1,0 +1,14 @@
+<div class="card card-container">
+  <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+  <img id="profile-img" class="profile-img-card" src="{{imagePath}}" />
+  <p id="profile-name" class="profile-name-card"></p>
+  <div class="form-signin">
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" value={{email}} (keyup)="setImage(email.value)" required autofocus #email>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" value="{{senha}}" required>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="login()">Login</button>
+  </div><!-- /form -->
+  <span [ngClass]="{'error':true, 'display':error}" >
+      Usuário ou senha inválidos
+  </span>
+</div><!-- /card-container -->
