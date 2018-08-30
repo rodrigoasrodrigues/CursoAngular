@@ -13,6 +13,15 @@ export class CadastroComponent implements OnInit {
     this.listaEventos= eventosService.getEventos();
   }
 
+  public eventoSelecionado: IEvento;
+
+  public selecionar(item:IEvento): void {
+    this.eventoSelecionado = item;
+  }
+  public clean(): void {
+    this.eventoSelecionado = null;
+  }
+
   ngOnInit() {
   }
 

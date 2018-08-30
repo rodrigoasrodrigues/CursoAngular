@@ -1,0 +1,10 @@
+.selecionado{
+    font-weight: bold;
+    background-color: #369;
+    
+}
+
+.selecionado a{
+    color:white;
+    text-decoration: none;
+}
