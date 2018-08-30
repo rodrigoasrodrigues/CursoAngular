@@ -22,6 +22,16 @@ export class CadastroComponent implements OnInit {
     this.eventoSelecionado = null;
   }
 
+  private novoEvento: IEvento;
+  public novo():void{
+    this.novoEvento = {descricao:'',data:'',preco:0}
+    this.eventoSelecionado = this.novoEvento;
+  }
+  public save():void{
+    this.listaEventos.push(this.eventoSelecionado);
+    this.clean();
+  }
+
   ngOnInit() {
   }
 
