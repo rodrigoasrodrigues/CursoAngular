@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IEvento } from '../interfaces/eventos.interface';
 import { EventosService } from '../services/evento.service';
 import { Config } from 'protractor';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,10 +11,8 @@ import { Config } from 'protractor';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor(eventosService:EventosService) { 
-    
-    eventosService.getEventosWS().subscribe( eventos => {
-      this.listaEventos= eventos }) ;
+  constructor(private eventosService:EventosService) { 
+    this.listar();
   }
 
   public eventoSelecionado: IEvento;
@@ -30,12 +29,28 @@ export class CadastroComponent implements OnInit {
     this.novoEvento = {descricao:'',data:'',preco:0}
     this.eventoSelecionado = this.novoEvento;
   }
-  public save():void{
-    this.listaEventos.push(this.eventoSelecionado);
+  public add():void{
+    if(!this.listaEventos.includes(this.eventoSelecionado))
+      this.incluir(this.eventoSelecionado);
     this.clean();
+  }
+  
+  public incluir(evento:IEvento){
+    this.eventosService.postEventoWS(evento)
+        .subscribe(
+          res => JSON.stringify(res),
+          error => alert(error),
+          () => this.listar()
+        );
+    
   }
 
   ngOnInit() {
+  }
+
+  public listar(){
+    this.eventosService.getEventosWS()
+        .subscribe( eventos => { this.listaEventos= eventos }) ;
   }
 
   public listaEventos: Config;
