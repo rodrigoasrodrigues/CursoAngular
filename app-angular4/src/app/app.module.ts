@@ -14,13 +14,15 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { EventosService } from './services/evento.service';
 import { SubLista } from './filters/sublista.filter';
 
+import { HttpModule } from '@angular/http'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent, MenuComponent, HomeComponent, CadastroComponent, NotfoundComponent, SubLista
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), FormsModule
+    BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule, HttpClientModule
   ],
   providers: [EventosService],
   bootstrap: [AppComponent]
