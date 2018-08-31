@@ -12,11 +12,12 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { EventosService } from './services/evento.service';
+import { SubLista } from './filters/sublista.filter';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MenuComponent, HomeComponent, CadastroComponent, NotfoundComponent
+    AppComponent, MenuComponent, HomeComponent, CadastroComponent, NotfoundComponent, SubLista
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), FormsModule

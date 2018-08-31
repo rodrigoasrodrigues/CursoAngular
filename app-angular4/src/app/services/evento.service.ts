@@ -5,7 +5,6 @@ import { Injectable } from "@angular/core";
 export class EventosService {
     public getEventos(): IEvento[] {
         return [
-
             { descricao: 'Avaliacao Angular', data: '30/08/2018', preco: 0 },
             { descricao: 'Palestra', data: '06/09/2018', preco: 150 },
             { descricao: 'Congresso de TI', data: '16/01/2019', preco: 400 },

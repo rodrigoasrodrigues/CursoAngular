@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "descricao": "Show da Magnus Lumen",
+            "data": "01/01/2018",
+            "preco": 20
+        },
+        {
+            "id": 2,
+            "descricao": "Avantasian's return",
+            "data": "01/01/2018",
+            "preco": 30
+        },
+        {
+            "id": 3,
+            "descricao": "Higher Dreams Live",
+            "data": "01/01/2018",
+            "preco": 35
+        },
+        {
+            "id": 4,
+            "descricao": "FNM Cover Brasil",
+            "data": "01/01/2018",
+            "preco": 15
+        },
+        {
+            "id": 5,
+            "descricao": "Iluminatta Revival",
+            "data": "01/01/2018",
+            "preco": 45
+        }
+    ]
+}
