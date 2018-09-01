@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 export class EventosService {
     public constructor(private _http: HttpClient) { }
 
-    private url: string = "http://localhost:3000/data";
+    private url: string = "http://localhost:3200/ws/eventos";
 
     public getEventosWS(){
         return this._http.get(this.url);
