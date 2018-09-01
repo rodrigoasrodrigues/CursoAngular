@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IEvento } from '../interfaces/eventos.interface';
 import { EventosService } from '../services/evento.service';
 import { Config } from 'protractor';
-import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-cadastro',
@@ -31,7 +30,7 @@ export class CadastroComponent implements OnInit {
   }
   public add():void{
     if(!this.listaEventos.includes(this.eventoSelecionado))
-      this.incluir(this.eventoSelecionado);
+    this.incluir(this.eventoSelecionado);
     this.clean();
   }
   
